@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Track public GitHub repositories and owner profiles."
+    />
+    <title>GitHub Repository Tracker</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <main class="page">
+      <header class="hero">
+        <p class="eyebrow">ASYNC JAVASCRIPT ASSIGNMENT</p>
+        <h1>GitHub Repository Tracker</h1>
+        <p class="intro">
+          Explore a GitHub user's public repositories and profile, refreshed
+          automatically every 60 seconds.
+        </p>
+      </header>
+
+      <form class="search" id="search-form">
+        <label for="username">GitHub username</label>
+        <div class="search-row">
+          <input
+            id="username"
+            name="username"
+            type="text"
+            placeholder="Try octocat"
+            autocomplete="off"
+            required
+            pattern="[A-Za-z0-9-]+"
+            title="Enter a valid GitHub username."
+          />
+          <button type="submit">Find repositories</button>
+        </div>
+      </form>
+
+      <p class="status" id="status" role="status" aria-live="polite">
+        Enter a GitHub username to get started.
+      </p>
+      <section id="results" aria-label="GitHub user and repositories"></section>
+    </main>
+  </body>
+</html>
